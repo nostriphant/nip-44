@@ -59,7 +59,7 @@ describe('NIP-44 v2', function () {
             $conversation_key = new ConversationKey($privkey, hex2bin($pub2));
             expect(bin2hex('' . $conversation_key))->toBe($vector->conversation_key);
             $keys = $conversation_key();
-
+            
             expect(Functions::decrypt($vector->payload, $keys))->toBe($vector->plaintext, 'Unable to properly decrypt vector payload');
 
             $payload = Functions::encrypt($vector->plaintext, $keys, hex2bin($vector->nonce));
