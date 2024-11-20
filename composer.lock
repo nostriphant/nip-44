@@ -55,16 +55,16 @@
         },
         {
             "name": "nostriphant/nip-01",
-            "version": "1.4",
+            "version": "1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nostriphant/nip-01.git",
-                "reference": "19e1e54458a62b837c1c1ba6e6e6c2865d340447"
+                "reference": "6aa62da5f4ca412fe36e70df9b9ba4c691692b3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nostriphant/nip-01/zipball/19e1e54458a62b837c1c1ba6e6e6c2865d340447",
-                "reference": "19e1e54458a62b837c1c1ba6e6e6c2865d340447",
+                "url": "https://api.github.com/repos/nostriphant/nip-01/zipball/6aa62da5f4ca412fe36e70df9b9ba4c691692b3e",
+                "reference": "6aa62da5f4ca412fe36e70df9b9ba4c691692b3e",
                 "shasum": ""
             },
             "require": {
@@ -100,9 +100,9 @@
             "description": "Nostr NIP-01 implementation in PHP",
             "support": {
                 "issues": "https://github.com/nostriphant/nip-01/issues",
-                "source": "https://github.com/nostriphant/nip-01/tree/1.4"
+                "source": "https://github.com/nostriphant/nip-01/tree/1.6"
             },
-            "time": "2024-11-20T12:58:38+00:00"
+            "time": "2024-11-20T14:26:35+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",

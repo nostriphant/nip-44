@@ -15,8 +15,8 @@ namespace {
 */
 namespace Pest {
 
-    function vectors(string $name): object {
-        return json_decode(file_get_contents(__DIR__ . '/vectors/' . $name . '.json'), false);
+    function vectors_nip44(): object {
+        return json_decode(file_get_contents(__DIR__ . '/vectors/nip44.json'), false);
     }
 
 
