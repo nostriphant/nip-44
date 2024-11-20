@@ -2,12 +2,6 @@
 
 namespace nostriphant\NIP44;
 
-/**
- * Description of NIP44
- * Based on: https://github.com/nbd-wtf/nostr-tools/blob/master/nip44.ts
- *
- * @author Rik Meijer <hello@rikmeijer.nl>
- */
 class Functions {
 
     static function encrypt(string $utf8_text, MessageKeys $keys, string $salt): string {

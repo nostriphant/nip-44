@@ -3,11 +3,6 @@
 namespace nostriphant\NIP44;
 use nostriphant\NIP44\MessageKeys;
 
-/**
- * Description of Decrypter
- *
- * @author Rik Meijer <hello@rikmeijer.nl>
- */
 readonly class Decrypter {
     
     private ChaCha20 $chacha;

@@ -2,11 +2,6 @@
 
 namespace nostriphant\NIP44;
 
-/**
- * Description of Encrypter
- *
- * @author Rik Meijer <hello@rikmeijer.nl>
- */
 readonly class Encrypter {
     
     private ChaCha20 $chacha;
