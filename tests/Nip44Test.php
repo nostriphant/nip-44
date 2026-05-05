@@ -8,6 +8,7 @@ use nostriphant\NIP44\ConversationKey;
 use function \Pest\vectors_nip44;
 use nostriphant\NIP44\Encrypt;
 use nostriphant\NIP44\Decrypt;
+use nostriphant\Secp256k1\Secp256k1;
 
 describe('NIP-44 v2', function () {
 
@@ -106,7 +107,7 @@ describe('NIP-44 v2', function () {
 
         it('get_conversation_key', function ($vector) {
             $privkey = Key::fromHex($vector->sec1);
-            expect(fn() => $privkey(Key::sharedSecret($vector->pub2)))->toThrow(\InvalidArgumentException::class, message: $vector->note);
+            expect(fn() => $privkey(Secp256k1::sharedSecret($vector->pub2)))->toThrow(\InvalidArgumentException::class, message: $vector->note);
         })->with(vectors_nip44()->v2->invalid->get_conversation_key);
     });
 
