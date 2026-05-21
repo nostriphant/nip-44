@@ -1,13 +1,7 @@
 <?php
 
 namespace nostriphant\NIP44;
-use nostriphant\NIP44;
 
-/**
- * Description of MessageKeys
- *
- * @author Rik Meijer <hello@rikmeijer.nl>
- */
 readonly class MessageKeys {
     
     
@@ -35,13 +29,15 @@ readonly class MessageKeys {
         return $result;
     }
     
-    public function __invoke(string $salt, int ...$lengths) : \Generator {
-        $keys = $this->hkdf_expand($salt, array_sum($lengths));
+    public function __invoke(string $salt, int ...$lengths) : array {
+        $keys_raw = $this->hkdf_expand($salt, array_sum($lengths));
         $offset = 0;
+        $keys = [];
         foreach ($lengths as $length) {
-            yield substr($keys, $offset, $length);
+            $keys[] = substr($keys_raw, $offset, $length);
             $offset += $length;
         }
+        return $keys;
     }
     
 }

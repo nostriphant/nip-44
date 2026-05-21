@@ -1,7 +1,6 @@
 <?php
 
 namespace nostriphant\NIP44;
-use nostriphant\NIP44\MessageKeys;
 
 readonly class Decrypter {
     

@@ -20,7 +20,7 @@ class Functions {
         $decoded = base64_decode($payload);
         $version = Primitives::uInt8(substr($decoded, 0, 1));
         if ($version !== 2) {
-            throw new \InvalidArgumentException('encryption version not supported');
+            throw new \InvalidArgumentException('encryption version '. $version . ' not supported');
         }
 
         $salt = substr($decoded, 1, 32);
