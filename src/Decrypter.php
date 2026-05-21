@@ -8,7 +8,7 @@ readonly class Decrypter {
     private HMACAad $hmac;
     
     public function __construct(MessageKeys $keys, private string $salt) {
-        list($chacha_key, $chacha_nonce, $hmac_key) = iterator_to_array($keys($this->salt, 32, 12, 32));
+        list($chacha_key, $chacha_nonce, $hmac_key) = $keys($this->salt, 32, 12, 32);
     
         $this->chacha = new ChaCha20($chacha_key, $chacha_nonce);
         $this->hmac = new HMACAad(new Hash($hmac_key), $this->salt);
