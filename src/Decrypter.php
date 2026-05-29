@@ -17,8 +17,10 @@ readonly class Decrypter {
     public function __invoke(string $decoded) : string {
         $ciphertext = substr($decoded, 33, -32);
         
-        if (substr($decoded, -32) !== ($this->hmac)($ciphertext)) {
-            throw new \InvalidArgumentException("Unexpected ciphertext, unmatching hmac");
+        $hmac = substr($decoded, -32);
+        $expected_hmac = ($this->hmac)($ciphertext);
+        if ($hmac !== $expected_hmac) {
+            throw new \InvalidArgumentException("unexpected ciphertext, unmatching hmac.");
         }
 
         return ($this->chacha)($ciphertext);

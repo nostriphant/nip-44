@@ -22,6 +22,12 @@ describe('NIP-44 v2', function () {
 
         $payload = Encrypt::make($sender_key, $recipient_pubkey)('Hello World!');
         expect(Decrypt::make($recipient_key, $sender_pubkey)($payload))->toBe('Hello World!');
+        
+        $payload = nostriphant\NIP44::encrypt($sender_key, $recipient_pubkey, 'Hello World!');
+        expect(Decrypt::make($recipient_key, $sender_pubkey)($payload))->toBe('Hello World!');
+        
+        $payload = Encrypt::make($sender_key, $recipient_pubkey)('Hello World!');
+        expect(nostriphant\NIP44::decrypt($recipient_key, $sender_pubkey, $payload))->toBe('Hello World!');
     });
 
     describe('valid', function () {

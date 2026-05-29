@@ -16,7 +16,8 @@
         "psr-4": {
             "nostriphant\\NIP44\\": "src/",
             "nostriphant\\NIP44Tests\\": "tests/"
-        }
+        },
+        "files" : ["NIP44.php"]
     },
     "authors": [
         {
