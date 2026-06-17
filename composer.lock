@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e90d6c39e22e73952562af0f53bdd67c",
+    "content-hash": "6e50eea04e2083f579e1f3246e8ca394",
     "packages": [
         {
             "name": "nostriphant/functional",
@@ -52,16 +52,16 @@
         },
         {
             "name": "nostriphant/nip-01",
-            "version": "2.4.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nostriphant/nip-01.git",
-                "reference": "31b681ef7b9687372ac27ab79046fbe51f4877b9"
+                "reference": "b9378839289a9287cf0ada2eb498219e6882a818"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nostriphant/nip-01/zipball/31b681ef7b9687372ac27ab79046fbe51f4877b9",
-                "reference": "31b681ef7b9687372ac27ab79046fbe51f4877b9",
+                "url": "https://api.github.com/repos/nostriphant/nip-01/zipball/b9378839289a9287cf0ada2eb498219e6882a818",
+                "reference": "b9378839289a9287cf0ada2eb498219e6882a818",
                 "shasum": ""
             },
             "require": {
@@ -91,9 +91,9 @@
             "description": "Nostr NIP-01 implementation in PHP",
             "support": {
                 "issues": "https://github.com/nostriphant/nip-01/issues",
-                "source": "https://github.com/nostriphant/nip-01/tree/2.4.1"
+                "source": "https://github.com/nostriphant/nip-01/tree/3.0.2"
             },
-            "time": "2026-05-05T07:25:09+00:00"
+            "time": "2026-06-17T13:47:33+00:00"
         },
         {
             "name": "nostriphant/secp256k1",
